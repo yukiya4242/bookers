@@ -3,31 +3,37 @@ class BooksController < ApplicationController
     @book = Book.new
   end
 
-  def create
+ def create
     @book = Book.new(book_params)
     if @book.save
     flash[:notice]= "successfully!!!!"
     redirect_to book_path(@book)
+    end
+    end
 
-  end
-end
 
   def index
     @books = Book.all
   end
 
   def show
-    @book = Book.find(params[:id])
+   @book = Book.find(params[:id])
   end
 
 
   def edit
+
   end
-end
+  
+  def delete
+    book = Book.find(params[:id])
+    book.destroy
+    redirect_to '/books'
+  end
 
   private
 
   def book_params
   params.require(:book).permit(:title, :body) if params[:book].present?
+  end
 end
-
