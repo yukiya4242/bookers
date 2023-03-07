@@ -7,16 +7,17 @@ class BooksController < ApplicationController
     @book = Book.new(book_params)
     if @book.save
       flash[:notice]= "successfully!!!!"
-      redirect_to new_book_path(@book)
+      redirect_to book_path(@book)
     end
   end
 
   def index
     @books = Book.all
+    @book = Book.new
   end
 
   def show
-
+    @book = Book.find(params[:id])
   end
 
   def edit
