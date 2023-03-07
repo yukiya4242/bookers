@@ -1,11 +1,11 @@
-
 Rails.application.routes.draw do
-  get 'books/new'
+  root 'homes#top'
+  get 'books/:id/new'=>'books#new'
   post 'books'=>'books#create'
   get 'books'=>'books#index',as: :index_book
-  get 'books/:id'=>'books#show'
-  get 'books'=>'books#edit'
-  resources :books
+  get 'books/show'
+  get 'books/:id/edit'=>'books#edit'
+resources :books
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  root 'homes#top'
+
 end
