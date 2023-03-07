@@ -1,20 +1,41 @@
 
 
-
 <body>
+
+
+
+
+
 <h1>books</h1>
 <table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Body</th>
+      <th colspan="3"></th>
+      </tr>
+      <td></td>
+      <td></td>
+      <td></td>
 
-  <% @books.each do |book| %>
+
+     <% @books.each do |book| %>
+     <p><%= book.title %></p>
+      <% end %>
+
+  </thead>
+
+
+
+
+
+
+   <% @books.each do |book| %>
    <p><%= book.body %></p>
    <% end %>
-
-  <% @books.each do |book| %>
-  <p><%= book.title %></p>
-  <% end %>
-
-
-
+      <th colspan="3"></th>
+    </tr>
+  </thead>
 
 
 </table>
