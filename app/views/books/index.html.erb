@@ -3,77 +3,24 @@
 
 <body>
 <h1>books</h1>
-
 <table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Body</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>リーダブルコート</td>
-      <td>より良いコードを書くためのシンプルで実践的なテクニック</td>
-      <td>show</td>
-      <td>edit</td>
-      <td>destroy</td>
-    </tr>
-    <tr>
-      <td>トラブル知らずのシステム設計</td>
-      <td>システム設計の要点を図解で説明してくれます</td>
-      <td>show</td>
-      <td>edit</td>
-      <td>destroy</td>
-    </tr>
-    <tr>
-      <td>楽しいRuby</td>
-      <td>Rubyの入門におすすめです</td>
-      <td>show</td>
-      <td>edit</td>
-      <td>destroy</td>
-    </tr>
-    <tr>
-      <td>入門Git</td>
-      <td>gitについての基本操作から内部構造まで解説してくれます</td>
-      <td>show</td>
-      <td>edit</td>
-      <td>destroy</td>
-      </tr>
-    <tr>
-      <td>アルゴリズム図鑑</td>
-      <td>アルゴリズムについてカラーイラストでしっかり解説してくれます</td>
-      <td>show</td>
-      <td>edit</td>
-      <td>destroy
-        </td>
-    </tr>
 
-    <tr>
-      <td>達人プログラマー</td>
-      <td>プログラマ入門者は必読！</td>
-      <td>show</td>
-      <td>edit</td>
-      <td>destroy</td>
-    </tr>
+  <% @books.each do |book| %>
+   <p><%= book.body %></p>
+   <% end %>
 
-    <tr>
-      <td>データベース実践入門</td>
-      <td>効率的なSQL文を教えてくれます</td>
+  <% @books.each do |book| %>
+  <p><%= book.title %></p>
+  <% end %>
 
-      <td>
-       show
-      </td>
-      <td>edit</td>
-      <td>destroy</td>
-    </tr>
-    </body>
-  </tbody>
+
+
+
+
 </table>
-
-
-
 <h2 class="sub-zone">New book</h2>
+
+
 
 <%= form_with model: @book do |f| %>
 <h4 class="sub-zone">Title</h4>
@@ -84,4 +31,5 @@
 
 <%= f.submit 'create book' %>
 <% end %>
+</body>
 

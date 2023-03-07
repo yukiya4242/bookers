@@ -1,0 +1,16 @@
+ Prefix Verb   URI Pattern                                                                                       Controller#Action
+                                    root GET    /                                                                                                 homes#top
+                                         GET    /books/:id/new(.:format)                                    books#new
+                                   books POST   /books(.:format)                   books#create
+                              index_book GET    /books(.:format)                                                                                  books#index
+                                         GET    /books/:id(.:format)                                                                              books#show
+                                         GET    /books/:id/edit(.:format)                                                                         books#edit
+                             update_book PATCH  /books/:id(.:format)                       books#update
+                                         GET    /books(.:format)                                                                                  books#index
+                                         POST   /books(.:format)                                                                                  books#create
+                                new_book GET    /books/new(.:format)                                                                              books#new
+                               edit_book GET    /books/:id/edit(.:format)                                                                         books#edit
+                                    book GET    /books/:id(.:format)                                                                              books#show
+                                         PATCH  /books/:id(.:format)                                                                              books#update
+                                         PUT    /books/:id(.:format)                                                                              books#update
+                                         DELETE /books/:id(.:format)                                                                              books#destroy
