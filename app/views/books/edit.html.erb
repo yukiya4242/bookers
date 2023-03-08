@@ -6,7 +6,7 @@
 
 
   <% if @book.errors.any? %>
-   <%= @book.errors.count %>!Error! try it again.
+   <%= @book.errors.count %>error
    <ul>
      <% @book.errors.full_messages.each do |message| %>
      <li><%= message %></li>
@@ -24,11 +24,11 @@
 <h5>body</h5>
 <%= f.text_area :body %>
 
-<%= f.submit 'BookUpdate' %>
+<%= f.submit 'Update Book' %>
 
 <% end %>
 
 <div class="link_book">
-<p><%= link_to "show", show_book_path(@book) %></p>
-<p><%= link_to "back", index_book_path(@book) %></p>
+<p><%= link_to "Show", show_book_path(@book) %></p>
+<p><%= link_to "Back", index_book_path %></p>
 </div>

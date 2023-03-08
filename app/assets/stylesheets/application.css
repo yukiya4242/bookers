@@ -30,15 +30,20 @@ h2 {
 body {
   margin: 33px;
   font-size: 13px;
-  line-height: 18px
+  line-height: 18px;
+  font-family: verdana, arial, helvetica, sans-serif;
 
 }
 
 table {
-    width: 100%;
-    margin-right: 100px;
-
+    display: table;
+    border-collapse: separate;
+    box-sizing: border-box;
+    text-indent: initial;
+    border-spacing: 2px;
+    border-color: grey;
 }
+
 
 td {
   text-align: left;

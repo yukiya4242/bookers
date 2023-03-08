@@ -3,16 +3,16 @@
 
 
 <div class="show1">
-<div class="show_title"><strong>Title:</strong><%= @book.title %></div>
-<div class="show_body"><strong>Body:</strong><%= @book.body %></div>
+<div class="show_title"><strong>Title:</strong>  <%= @book.title %></div>
+<div class="show_body"><strong>Body:</strong>  <%= @book.body %></div>
 </div>
 
 
 
 
 <div class="link_book">
-<p><%= link_to "Back", index_book_path %>
-</p>
-<p><%= link_to "Edit", edit_book_path %>
-</p>
+<%= link_to "Edit", edit_book_path %>
+|
+<%= link_to "Back", index_book_path %>
+
 </div>

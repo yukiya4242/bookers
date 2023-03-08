@@ -1,4 +1,6 @@
-
+<div>
+  <%= flash[:notice] %>
+</div>
 
 
 <body>
@@ -19,9 +21,9 @@
     <tr>
       <td><%= book.title %></td>
       <td><%= book.body %></td>
-      <td><%= link_to "show", show_book_path(book) %></td>
-      <td><%= link_to "edit", edit_book_path(book) %></td>
-      <td><%= link_to "destroy", destroy_book_path(book),method: :delete,"data-confirm"=>"Are you sure?" %></td>
+      <td><%= link_to "Show", show_book_path(book) %></td>
+      <td><%= link_to "Edit", edit_book_path(book) %></td>
+      <td><%= link_to "Destroy", destroy_book_path(book),method: :delete,"data-confirm"=>"Are you sure?" %></td>
     </tr>
     <% end %>
   </tbody>
@@ -36,7 +38,7 @@
 
 
   <% if @book.errors.any? %>
-   <%= @book.errors.count %>!Error! try it again.
+   <%= @book.errors.count %>!error! try it again.
    <ul>
      <% @book.errors.full_messages.each do |message| %>
      <li><%= message %></li>
@@ -52,7 +54,7 @@
 <h4 class="sub-zone">Body</h4>
 <%= f.text_area :body %>
 
-<%= f.submit 'create book' %>
+<%= f.submit 'Create Book' %>
 <% end %>
 </body>
 
