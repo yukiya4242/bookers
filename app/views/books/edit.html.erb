@@ -3,6 +3,21 @@
 <%= form_with model: @book, url: update_book_path(@book), method: :patch do |f| %>
 
 
+
+
+  <% if @book.errors.any? %>
+   <%= @book.errors.count %>!Error! try it again.
+   <ul>
+     <% @book.errors.full_messages.each do |message| %>
+     <li><%= message %></li>
+     <% end %>
+
+   </ul>
+   <% end %>
+
+
+
+
 <h5>title</h5>
 <%= f.text_field :title %>
 
@@ -13,5 +28,7 @@
 
 <% end %>
 
+<div class="link_book">
 <p><%= link_to "show", show_book_path(@book) %></p>
 <p><%= link_to "back", index_book_path(@book) %></p>
+</div>

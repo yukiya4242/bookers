@@ -29,11 +29,19 @@ class BooksController < ApplicationController
 
   end
 
-  def update
+
+
+
+    def update
     @book = Book.find(params[:id])
-    @book.update(book_params)
-    redirect_to book_path(@book)
-  end
+    if@book.update(book_params)
+    flash[:notice]= "successfully!!!!"
+    redirect_to show_book_path(@book)
+    else
+    flash[:notice]= "error"
+    render :edit
+    end
+    end
 
 
 

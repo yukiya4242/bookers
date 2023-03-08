@@ -18,6 +18,7 @@ h1 {
   display :block;
   font-weight: bold;
   width: 100%
+
 }
 
 
@@ -60,4 +61,21 @@ td {
 
 tbody {
   display: table-row-group;
+}
+
+.link_book {
+  display: flex;
+
+}
+
+
+
+.show_title {
+  margin: 33px;
+
+
+}
+
+.show_body {
+  margin: 33px;
 }

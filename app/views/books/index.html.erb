@@ -36,9 +36,9 @@
 
 
   <% if @book.errors.any? %>
-   <%= @book.errors.count %> !Error! try it again.
+   <%= @book.errors.count %>!Error! try it again.
    <ul>
-     <% @book.errors_full.messages.each do |message| %>
+     <% @book.errors.full_messages.each do |message| %>
      <li><%= message %></li>
      <% end %>
 
