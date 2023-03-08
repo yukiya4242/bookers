@@ -34,13 +34,13 @@ body {
 }
 
 table {
-    display: table;
-    border-collapse: separate;
-    box-sizing: border-box;
-    text-indent: initial;
-    border-spacing: 2px;
-    border-color: grey;
     width: 100%;
+    margin-right: 100px;
+
+}
+
+td {
+  text-align: left;
 }
 
 .sub-zone {
@@ -56,4 +56,8 @@ table {
 
 .body_logo {
   display: table-cell;
+}
+
+tbody {
+  display: table-row-group;
 }
